@@ -17,7 +17,7 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item">
+                <div class="item" @mouseenter="stopInterval" @mouseleave="startInterval">
                     <img :src="slides[activeIndexSlide].image" :alt="slides[activeIndexSlide].title" />
                     <div class="text">
                         <h3>{{ slides[activeIndexSlide].title }}</h3>

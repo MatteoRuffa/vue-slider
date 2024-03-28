@@ -6,7 +6,8 @@ createApp({
     data() {
         return {
             slides: slides,
-            activeIndexSlide: 0
+            activeIndexSlide: 0,
+            intervalId: 0
         }
     },
     methods: {
@@ -26,9 +27,15 @@ createApp({
         },
         selectSlide(index) {
             this.activeIndexSlide = index;
+        },
+        stopInterval() {
+            clearInterval(this.intervalId);
+        },
+        startInterval() {
+            this.intervalId = setInterval(this.next, 3000);
         }
     },
     mounted() {
-        setInterval(this.next, 3000);
+        this.startInterval();
     }    
 }).mount('#app');
