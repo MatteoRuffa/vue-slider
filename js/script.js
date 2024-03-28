@@ -10,11 +10,19 @@ createApp({
         }
     },
     methods: {
-        next () {
-            this.activeIndexSlide++;
+        next() {
+            if (this.activeIndexSlide < this.slides.length - 1) {
+                this.activeIndexSlide++;
+            } else {
+                this.activeIndexSlide = 0;
+            }
         },
         prev(){
-            this.activeIndexSlide--;
+            if (this.activeIndexSlide > 0) {
+                this.activeIndexSlide--;
+            } else {
+                this.activeIndexSlide = this.slides.lenght - 1;;
+            }
         }
     }    
 }).mount('#app');
