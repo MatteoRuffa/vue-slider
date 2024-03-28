@@ -27,5 +27,8 @@ createApp({
         selectSlide(index) {
             this.activeIndexSlide = index;
         }
+    },
+    mounted() {
+        setInterval(this.next, 3000);
     }    
 }).mount('#app');
