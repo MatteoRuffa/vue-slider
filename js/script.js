@@ -10,6 +10,11 @@ createApp({
         }
     },
     methods: {
-
+        next () {
+            this.activeIndexSlide++;
+        },
+        prev(){
+            this.activeIndexSlide--;
+        }
     }    
 }).mount('#app');
