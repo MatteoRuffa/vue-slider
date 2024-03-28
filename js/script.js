@@ -23,6 +23,9 @@ createApp({
             } else {
                 this.activeIndexSlide = this.slides.length - 1;
             }
+        },
+        selectSlide(index) {
+            this.activeIndexSlide = index;
         }
     }    
 }).mount('#app');
