@@ -17,11 +17,11 @@ createApp({
                 this.activeIndexSlide = 0;
             }
         },
-        prev(){
-            if (this.activeIndexSlide > 0) {
+        prev() {
+            if(this.activeIndexSlide > 0){
                 this.activeIndexSlide--;
             } else {
-                this.activeIndexSlide = this.slides.lenght - 1;;
+                this.activeIndexSlide = this.slides.length - 1;
             }
         }
     }    
