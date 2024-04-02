@@ -30,12 +30,13 @@ createApp({
         },
         stopInterval() {
             clearInterval(this.intervalId);
+            this.intervalId = null;
         },
-        startInterval() {
+        startAutoplay(){
             this.intervalId = setInterval(this.next, 3000);
         }
     },
     mounted() {
-        this.startInterval();
+        this.startAutoplay();
     }    
 }).mount('#app');
